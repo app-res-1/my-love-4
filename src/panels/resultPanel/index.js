@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { Button } from "@vkontakte/vkui";
 import bridge from "@vkontakte/vk-bridge";
 import cn from "classnames";
 import "./ResultPanel.scss";
@@ -11,16 +10,12 @@ import { ResultModal } from "./ResultModal/index";
 
 import {
   APP_IMG_SHARING_STORIES,
-  APP_ILLUMINATE,
-  APP_STATISTICS,
-  APP_REMEMBER_SUMMER,
-  APP_STATS_APP,
-  APP_SQUID_GAME,
-  APP_MY_LOVE_1,
-  NAME_PROJECT,
+  APP_ID_TARGET,
+  GROUP_TARGET_MSG_ID
 } from "../../constants";
 import { AnimationStars } from "../../components";
 import { navigate } from "@reach/router";
+import { Link } from "@vkontakte/vkui";
 
 const ResultPanel = ({
   id,
@@ -40,7 +35,7 @@ const ResultPanel = ({
   useEffect(() => {
     setTimeout(() => {
       nativeAds(getPlatform);
-    }, 3000);
+    }, 4000);
   }, []);
 
   function success() {
@@ -72,7 +67,7 @@ const ResultPanel = ({
 
   return (
     <>
-      <AnimationStars />
+      {/* <AnimationStars /> */}
       <div
         className={cn({
           "result-panel": true,
@@ -85,9 +80,17 @@ const ResultPanel = ({
         >
           Посмотреть результат
         </Button>
-        <Button className="buttons small-text" onClick={showModal}>
+        <Button className="buttons small-text" onClick={() => openNewApp(APP_ID_TARGET)} >
           Узнать кол-во сообщений и шагов за 2022г
         </Button>
+      
+        <Button className="button small-text" >
+        <Link className="btn-link" href={`https://vk.me/public${GROUP_TARGET_MSG_ID}`} target="_blank">
+        Узнать тайных поклонников страницы
+        </Link>
+        </Button>
+     
+       
       </div>
       <ResultModal
         setIsModalVisible={setIsModalVisible}

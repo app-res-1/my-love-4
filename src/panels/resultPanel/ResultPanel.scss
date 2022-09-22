@@ -5,9 +5,11 @@
   justify-content: center;
   height: 100vh;
   padding: 80px 20px 20px 20px;
-  // background: no-repeat url("../../img/bg.png");
-  background: black;
-  background-size: cover;
+  background: linear-gradient(
+    0deg,
+    rgba(74, 191, 217, 0.74) 0%,
+    rgba(204, 219, 125, 0.98) 75%
+  );
 
   &.web {
     padding: 0px 20px 20px 20px;
@@ -51,6 +53,12 @@
     }
 
     span {
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    a {
       color: black;
       font-weight: bold;
       font-size: 1rem;

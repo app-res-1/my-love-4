@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
-import { Panel, PanelHeader, Button } from "@vkontakte/vkui";
+import { Button } from "@vkontakte/vkui";
 
-import { TemplatePage, AnimationStars } from "../../components";
+import { TemplatePage } from "../../components";
 import "./Home.scss";
 
 import { dataTemplatePages } from "../../helpers";
@@ -61,8 +61,8 @@ const Home = ({
 
   return (
     <>
-      {/* <div className="rain-container">{rainItems(1000)}</div> */}
-      <AnimationStars />
+   
+      {/* <AnimationStars /> */}
       <div>
         <>
           {fetchedUser && (

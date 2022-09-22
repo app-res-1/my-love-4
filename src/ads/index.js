@@ -8,8 +8,12 @@ export function nativeAds(getPlatform) {
         .send("VKWebAppShowNativeAds", {
           ad_format: "preloader",
         })
-        .then((res) => {})
-        .catch((err) => {});
+        .then((res) => {
+          console.log("ads res", res);
+        })
+        .catch((err) => {
+          console.log("ads err", err);
+        });
   return res;
 }
 

@@ -168,7 +168,7 @@ const TemplatePage = ({
       </div>
 
       <div className={`buttons ${buttonName.length > 1 ? "two-item" : ""}`}>
-        {buttonName.length &&
+        {Boolean(buttonName.length) &&
           buttonName.map((item, index) => {
             return (
               <Button
