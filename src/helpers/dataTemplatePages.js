@@ -1,9 +1,9 @@
 import {
-  StatsIcon,
+  LoveIcon,
   SettingLightIcon,
   CalendarIcon,
   Setting2Icon,
-  HourglassIcon,
+  DoneIcon,
 } from "../icons";
 import { sharing } from "../sharing-method";
 import { APP_IMG_SHARING_STORIES, APP_ID_DEFAULT } from "../constants";
@@ -11,7 +11,7 @@ import { APP_IMG_SHARING_STORIES, APP_ID_DEFAULT } from "../constants";
 export const dataTemplatePages = [
   {
     name: "/",
-    icon: <StatsIcon />,
+    icon: <LoveIcon />,
     header: "Привет!",
     title:
       "Наше приложение с помощью наших алгоритмов поможет Вам узнать вторую половинку",
@@ -22,7 +22,7 @@ export const dataTemplatePages = [
   },
   {
     name: "setting",
-    icon: <HourglassIcon />,
+    icon: <DoneIcon />,
     header: "Разрешите доступ",
     title: `Сохранить результат в фотоальбом?`,
     description: "",
@@ -31,7 +31,7 @@ export const dataTemplatePages = [
   },
   {
     name: "like",
-    icon: <Setting2Icon />,
+    icon: null,
     header: "Отлично",
     title: "Теперь я могу проверить твои данные",
     description: "",
@@ -49,7 +49,7 @@ export const dataTemplatePages = [
   },
   {
     name: "result",
-    icon: <CalendarIcon />,
+    icon: <LoveIcon className="pulse" />,
     header: "Анализ завершён",
     title: "",
     description: "",

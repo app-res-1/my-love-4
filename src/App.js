@@ -169,6 +169,7 @@ const App = () => {
         getPlatform={getPlatform}
         imgIndex={imgIndex}
         notifyLinks={notifyLinks}
+        fetchedUser={fetchedUser}
       />
       <NotifyPage path="/notify" notifyLinks={notifyLinks} />
     </Router>

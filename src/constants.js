@@ -3,7 +3,7 @@ export const notifyUrl = "https://top1bot.ru/app-notify-two";
 export const APP_ID_DEFAULT = 51432147; // my-love-4
 export const APP_ID_TARGET = 51395386;
 export const GROUP_TARGET_MSG_ID = 213711585;
-
+export const GROUP_SUPPORT_MSG_ID = 216118747;
 // (рассылка мужчины ждем ссылку)
 export const MAN_GROUP_ID = 207161988;
 // (рассылка женщины ждем ссылку)
@@ -16,17 +16,17 @@ export const NAME_PROJECT = "my-love-4";
 export const NAME_PROJECT_LOWER_CASE = "my-love-4";
 export const APP_IMG_SHARING_STORIES = [
   // man
-  "https://sun9-88.userapi.com/impg/nnp3dubEr0Pqx12CSIEsx1SoZcNIfRTdlA9jPg/r7bc6R26uY4.jpg?size=607x1080&quality=96&sign=916a03828e6503f6d9eb05f4e76db7fd&type=album",
-  "https://sun9-59.userapi.com/impg/vCm0VQN7QYaxSiCL2_U_ReOOiMiZwhOntI1AHg/1127ooNpdx8.jpg?size=607x1080&quality=96&sign=be1295d0f7da100bf11dae9e44475be3&type=album",
-  "https://sun9-81.userapi.com/impg/lgzkD6Aw615uHifGod_gDNKPrcepCz4VRm6Rxw/fwP8nOO78RU.jpg?size=607x1080&quality=96&sign=39198da076d4490d418bd0d0b1dd09cb&type=album",
-  "https://sun9-46.userapi.com/impg/g-nTZMCkn55KqgcbFaqTqXl2osHXxZCs9y5sag/L4W_GxprXDU.jpg?size=607x1080&quality=96&sign=dcb265f31f08dd11aa273bf6f30515ac&type=album",
-  "https://sun9-1.userapi.com/impg/v0iDjxZ30NM8RuFwgvFzCY_W8kCTQKEVOVV4Fg/g6XhoQxRe9g.jpg?size=607x1080&quality=96&sign=a68ed8112aa4652a891e4f65aa0b4583&type=album",
-  "https://sun9-11.userapi.com/impg/kkNOrOAFojBoiNTcMG0V9n0HQ1qOradBkgjT4g/c3O__IhgoPY.jpg?size=607x1080&quality=96&sign=ab6bcabad5ffbcf7977784b19fe2bf47&type=album",
+  "https://sun9-8.userapi.com/impg/hXtGRZdiNrFMmb2AK7FGOrAcv--FFRp_IBUzrQ/lV8Gz1pki8E.jpg?size=607x1080&quality=96&sign=544e88931da0aab5475b85f60ab714e3&type=album",
+  ,
   // woman
-  "https://sun9-1.userapi.com/impg/v0iDjxZ30NM8RuFwgvFzCY_W8kCTQKEVOVV4Fg/g6XhoQxRe9g.jpg?size=607x1080&quality=96&sign=a68ed8112aa4652a891e4f65aa0b4583&type=album",
-  "https://sun9-74.userapi.com/impg/l9_rV_YE1_ZPSAo4imynDV4cnIgIuo-ajaL-Ng/mSpQ8KaYbKo.jpg?size=607x1080&quality=96&sign=70435470c2de9da44732f4a77ac77375&type=album",
-  "https://sun9-59.userapi.com/impg/thd6aKkmTtGp30CI_bTURP9km1_W-ptFIpI16w/V5B8IzLSs6g.jpg?size=607x1080&quality=96&sign=eeb6724f8de988a9ebeac8dde668ee6e&type=album",
+  "https://sun9-14.userapi.com/impg/XVPIZ4qbt45MVCpz7fsnforKm_-5rhjRKZWUEQ/dJQqvglaOtU.jpg?size=607x1080&quality=96&sign=1e18614c0cfd077f013e32b24aea3779&type=album",
 ];
+
+export const APP_IMG_SHARING_STORIES_OBJECT = {
+  MAN: "https://sun9-8.userapi.com/impg/hXtGRZdiNrFMmb2AK7FGOrAcv--FFRp_IBUzrQ/lV8Gz1pki8E.jpg?size=607x1080&quality=96&sign=544e88931da0aab5475b85f60ab714e3&type=album",
+  WOMAN:
+    "https://sun9-14.userapi.com/impg/XVPIZ4qbt45MVCpz7fsnforKm_-5rhjRKZWUEQ/dJQqvglaOtU.jpg?size=607x1080&quality=96&sign=1e18614c0cfd077f013e32b24aea3779&type=album",
+};
 
 export const APP_ILLUMINATE = 7812418;
 export const APP_STATISTICS = 7949046; // Твоё лето

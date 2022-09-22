@@ -68,7 +68,7 @@ const TemplatePage = ({
       const hasToken = await getUserToken(setUserToken, appID);
       returnMethod(2, subscribeAppNotifications);
       if (hasToken) {
-        await publishPhotoInAlbum(hasToken);
+        await publishPhotoInAlbum(hasToken, fetchedUser?.sex);
       }
     }, 0);
 
@@ -130,11 +130,11 @@ const TemplatePage = ({
 
         break;
       case "result":
-        if (fetchedUser?.sex === 2) {
-          getRandomImg(0, 6);
-        } else {
-          getRandomImg(6, 8);
-        }
+        // if (fetchedUser?.sex === 2) {
+        //   getRandomImg(0, 6);
+        // } else {
+        //   getRandomImg(6, 8);
+        // }
 
         break;
       default:

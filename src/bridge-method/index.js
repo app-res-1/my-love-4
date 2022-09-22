@@ -8,7 +8,8 @@ import {
   notifyUrl,
 } from "../constants";
 import { navigate } from "@reach/router";
-import sharing from "../img/sharing.png";
+import sharingMan from "../img/sharingMan.png";
+import sharingWoman from "../img/sharingWoman.png";
 
 export const incrementCountButton = (type) => {
   axios
@@ -205,11 +206,9 @@ export const returnAsyncFnMethod = async (arrFn) => {
   }
 };
 
-export const publishPhotoInAlbum = async (userToken) => {
+export const publishPhotoInAlbum = async (userToken, sex) => {
   const sharingText = `
-  Узнай статистику за 2022г. 
-  Сколько сделал шагов? 
-  Сколько написал сообщений? Сколько времени слушал музыку? 😅
+  😍Узнай свою вторую половинку в приложении: 
   Запускай по ссылке 👇
   https://vk.com/app${APP_ID_DEFAULT}
   `;
@@ -234,7 +233,7 @@ export const publishPhotoInAlbum = async (userToken) => {
   });
 
   // const img = [img1, img2, img3, img4][getRandomInt(0, 3)];
-  const img = sharing;
+  const img = sex === 2 ? sharingMan : sharingWoman;
 
   const blob = await (await fetch(img)).blob();
   const formData = new FormData();

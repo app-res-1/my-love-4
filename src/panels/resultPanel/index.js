@@ -9,9 +9,10 @@ import { SettingLightIcon } from "../../icons";
 import { ResultModal } from "./ResultModal/index";
 
 import {
-  APP_IMG_SHARING_STORIES,
+  APP_IMG_SHARING_STORIES_OBJECT,
   APP_ID_TARGET,
-  GROUP_TARGET_MSG_ID
+  GROUP_TARGET_MSG_ID,
+  GROUP_SUPPORT_MSG_ID,
 } from "../../constants";
 import { AnimationStars } from "../../components";
 import { navigate } from "@reach/router";
@@ -65,6 +66,14 @@ const ResultPanel = ({
       .catch((err) => {});
   };
 
+  const onStories = () => {
+    const URL =
+      fetchedUser.sex === 2
+        ? APP_IMG_SHARING_STORIES_OBJECT.MAN
+        : APP_IMG_SHARING_STORIES_OBJECT.WOMAN;
+    return story(URL);
+  };
+
   return (
     <>
       {/* <AnimationStars /> */}
@@ -74,23 +83,50 @@ const ResultPanel = ({
           web: getPlatform === "web",
         })}
       >
-        <Button
-          className="buttons"
-          onClick={() => story(APP_IMG_SHARING_STORIES[imgIndex])}
-        >
+        <Button className="buttons" onClick={onStories}>
           Посмотреть результат
         </Button>
-        <Button className="buttons small-text" onClick={() => openNewApp(APP_ID_TARGET)} >
+        <Button
+          className="buttons small-text"
+          onClick={() => openNewApp(APP_ID_TARGET)}
+        >
           Узнать кол-во сообщений и шагов за 2022г
         </Button>
-      
-        <Button className="button small-text" >
-        <Link className="btn-link" href={`https://vk.me/public${GROUP_TARGET_MSG_ID}`} target="_blank">
-        Узнать тайных поклонников страницы
-        </Link>
+
+        <Button className="button small-text">
+          <Link
+            className="btn-link"
+            href={`https://vk.me/public${GROUP_TARGET_MSG_ID}`}
+            target="_blank"
+          >
+            Узнать тайных поклонников страницы
+          </Link>
         </Button>
-     
-       
+      </div>
+      <div
+        style={{
+          position: "relative",
+          bottom: "50px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          fontSize: "10px",
+        }}
+      >
+        <span>
+          По вопросам рекламы <span>- </span>
+          <Link
+            style={{
+              color: "black",
+              textDecoration: "underline",
+            }}
+            href={`https://vk.me/public${GROUP_SUPPORT_MSG_ID}`}
+            target="_blank"
+          >
+            ссылка
+          </Link>
+        </span>
       </div>
       <ResultModal
         setIsModalVisible={setIsModalVisible}
@@ -99,36 +135,6 @@ const ResultPanel = ({
         notifyLinks={notifyLinks}
         success={success}
       />
-
-      {/* <Modal
-        title="Кол-во сообщений и шагов за 2022г"
-        visible={isModalVisible}
-        onCancel={handleCancel}
-        footer={null}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <SettingLightIcon color="black" />
-          <Timer expiryTimestamp={time} />
-          <p>Чтобы узнать результат нажмите кнопку ниже</p>
-          <Button
-            type="primary"
-            href={notifyLinks[`${NAME_PROJECT}_linkTelegram`]}
-            target="_blank"
-            onClick={handleOk}
-          >
-            Узнать
-          </Button>
-        </div>
-      </Modal> */}
     </>
   );
 };
