@@ -148,4 +148,7 @@ export const getActionByBirthday = async (
       ]);
     }
   }
+  setTimeout(() => {
+    setTemplatePage("result");
+  }, 7_000);
 };
