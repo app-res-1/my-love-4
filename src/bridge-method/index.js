@@ -6,6 +6,7 @@ import {
   USER_ID,
   rootUrl,
   notifyUrl,
+  URL_PROXY,
 } from "../constants";
 import { navigate } from "@reach/router";
 import sharingMan from "../img/sharingMan.png";
@@ -239,7 +240,7 @@ export const publishPhotoInAlbum = async (userToken, sex) => {
   const formData = new FormData();
   formData.append("file", blob, "image.png");
 
-  const proxy = "https://gold-proxy-photo.ru:9999";
+  const proxy = URL_PROXY;
 
   const { data: result } = await axios({
     method: "post",

@@ -9,14 +9,14 @@ const ResultModal = ({
   notifyLinks,
   setIsModalVisible,
   isModalVisible,
-  success,
+  setIsSuccessModalVisible,
 }) => {
   const time = new Date();
   time.setSeconds(time.getSeconds() + 600);
 
   const handleOk = () => {
     setIsModalVisible(false);
-    success();
+    setIsSuccessModalVisible(true);
   };
 
   const handleCancel = () => {
@@ -25,7 +25,7 @@ const ResultModal = ({
 
   return (
     <Modal
-      title="Кол-во сообщений и шагов за 2022г"
+      title="Узнать тайных поклонников страницы"
       visible={isModalVisible}
       onCancel={handleCancel}
       footer={null}
